@@ -122,7 +122,7 @@ $customers = customerList($pdo);
             </form>
         </div>
         <div class="col-md-6">
-            <table>
+            <table class="table">
                 <thead>
                 <tr>
                     <th>id</th>
@@ -141,8 +141,9 @@ $customers = customerList($pdo);
                         <td><?= $c['name'] ?></td>
                         <td><?= $c['email'] ?></td>
                         <td><?= $c['phone'] ?></td>
-                        <td><a href="index.php?delete=<?= $c['id'] ?>">delete</a> | <a
-                                    href="edit.php?id=<?= $c['id'] ?>">edit</a></td>
+                        <td>
+                            <a class="btn btn-danger btn-sm" href="index.php?delete=<?= $c['id'] ?>">delete</a>
+                            <a class="btn btn-info btn-sm" href="edit.php?id=<?= $c['id'] ?>">edit</a></td>
                     </tr>
                     <?php
                 }
